@@ -8,3 +8,4 @@ Notes
 4) The source folder contains all the files we will use to write the application
 5) Building for production, all files will be put into public folder
 6) npm start --> run react application
+7) React Developer Tools --> Chrome Extension
