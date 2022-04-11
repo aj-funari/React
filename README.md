@@ -16,4 +16,7 @@ Notes
 -A key is an identifier for a dynamically created element.
 11) ternary if statement --> Before the question mark is the condition, after the question mark is the component that we want to render if that condition is true.
 12) A hook is a function that allows you to add functionality to a component.
-13) useState is a built-in hook that we can use to handle state changes in our application. The second value that is being returned from usestate is a function to update the state.
+13) useState is a built-in hook that we can use to handle state changes in our application. 
+-first value returned: the state value
+-second value returned: the function to change the state
+14) useEffect allows us to perform effects inside our function conponents

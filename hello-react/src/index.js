@@ -1,31 +1,84 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import "./index.css"
 
-// Using useState
-
-function App() {
-    const [status, setStatus] = useState("Open");
+// Working with useEffect
+function Checkbox() {
+    const [checked, setChecked] = useState(true);
+    
+    useEffect(() => {
+        // alert 
+        alert('checked: ' + checked.toString());
+    });
+    
     return (
-        <div>
-            <h2>Status: {status}</h2>
-            <button onClick={() => setStatus("Open")}>
-                Open
-            </button>
-            <button onClick={() => setStatus("Back in 5")}>
-                Break
-            </button>
-            <button onClick={() => setStatus("Closed")}>
-                Closed
-            </button>
-        </div>
+        <>
+            <input 
+                type="checkbox" 
+                value={checked}
+                onChange={() => 
+                    setChecked(checked => !checked)
+                }
+            />
+            {checked ? "checked" : "not checked"}
+        </>
     );
 }
 
 ReactDOM.render(
-    <App />,
+    <Checkbox />,
     document.getElementById("root")
 );
+
+
+// Using useState
+// function App() {
+//     const [year, setYear] = useState(2022)
+//     const [manager, setManager] = useState("Alec");
+//     const [status, setStatus] = useState("Open");
+//     return (
+//         <React.Fragment>
+//             <div>
+//                 <h1>Current Year: {year}</h1>
+//                 <button onClick={() => setYear(year + 1)}>
+//                     New Year
+//                 </button>
+//                 <button onClick={() => setYear(2022)}>
+//                     Time Travel Back
+//                 </button>
+//             </div>
+//             <div>
+//                 <h1>Manager on Duty: {manager}</h1>
+//                 <button onClick={() => setManager("Alec")}>
+//                     Alec
+//                 </button>
+//                 <button onClick={() => setManager("Joeseph")}>
+//                     Joeseph
+//                 </button>
+//                 <button onClick={() => setManager("Funari")}>
+//                     Funari
+//                 </button>
+//             </div>
+//             <div>
+//                 <h1>Status: {status}</h1>
+//                 <button onClick={() => setStatus("Open")}>
+//                     Open
+//                 </button>
+//                 <button onClick={() => setStatus("Back in 5")}>
+//                     Break
+//                 </button>
+//                 <button onClick={() => setStatus("Closed")}>
+//                     Closed
+//                 </button>
+//             </div>
+//         </React.Fragment>
+//     );
+// }
+
+// ReactDOM.render(
+//     <App />,
+//     document.getElementById("root")
+// );
 
 // ARRAY DESTRUCTION --> 'first'/'second'/'third' are just variable names
 // const [, , fruit] = [
