@@ -1,7 +1,7 @@
 # React
 JavaScript library
 
-Notes
+LinkedIn Learning --> Learning React.js
 1) React is used to create user interfaces
 2) Package manager --> Node.js
 3) 'package.json' contains all the project's dependencies
@@ -20,3 +20,5 @@ Notes
 -first value returned: the state value
 -second value returned: the function to change the state
 14) useEffect allows us to perform effects inside our function conponents
+15) A reducer function's most simple definition is that it takes in the current state, and returns a new state. 
+16) Deploy a React app --> build project, Netlify
