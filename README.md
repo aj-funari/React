@@ -22,3 +22,6 @@ LinkedIn Learning --> Learning React.js
 14) useEffect allows us to perform effects inside our function conponents
 15) A reducer function's most simple definition is that it takes in the current state, and returns a new state. 
 16) Deploy a React app --> build project, Netlify
+
+CREATE APP -> npx create-react-app app
+1) fix import ReactDOM from 'react-dom/client' *no client
