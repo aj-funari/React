@@ -29,8 +29,16 @@ const Single = ({item}) => {
   );
 };
 
+// shaped the prop types to match what we have in data
+// ./data/courses.json
 Single.propTypes = {
-  item: PropTypes.object.isRequired
+  item: PropTypes.shape({
+    title: PropTypes.string,
+    release_date: PropTypes.string,
+    views: PropTypes.string,
+    description: PropTypes.string,
+    link: PropTypes.string,
+  })
 };
 
 export default Single;
