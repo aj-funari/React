@@ -33,3 +33,7 @@
 32 timing npm:load Completed in 46ms
 33 silly logfile done cleaning log files
 34 http fetch GET 200 https://registry.npmjs.org/npm 427ms (cache miss)
+35 timing command:exec Completed in 247486ms
+36 verbose exit 0
+37 timing npm Completed in 247630ms
+38 info ok

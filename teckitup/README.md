@@ -24,3 +24,6 @@ Notes
 PaperProvider
 1) Modify index.js to use PaperProvider
 2) paper library --> find @ Callstack.github.IO/react-native-paper
+
+React Native
+1) Navigating through 

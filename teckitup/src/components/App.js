@@ -21,42 +21,37 @@ const OpenURLButton = ({ url }) => {
       console.log("Don't know how to open URL: " + link)
     }
   });
-  return <Button title="Tap to view course" onPress={handlePress} />;
+  return <Button title="Tap to follow link" onPress={handlePress} />;
 };
 
 const App = () => {
     return (
       <View style={styles.bar}>
-      <Appbar styles={styles.bar}>
-       <Appbar.Content title="Teckitup"/>
-      </Appbar>
-      <FlatList 
-        data={courses}
-        renderItem={({item}) =>
-        <Card>
-          <Card.Cover source={{url: item.image}} />
-          <Card.Content>
-            <Title>{item.title}</Title>
-            <Paragraph>{item.description}</Paragraph>
-          </Card.Content>
-          <Card.Actions>
-            <OpenURLButton url={item.link}/>
-          </Card.Actions>
-        </Card>
-      }
-    />
-  </View>
+        <Appbar>
+          <Appbar.Content title="ALEC FUNARI PORTFOLIO"/>
+        </Appbar>
+        <FlatList 
+          data={courses}
+          renderItem={({item}) =>
+          <Card>
+            <Card.Cover source={{url: item.image}} />
+            <Card.Content>
+              <Title>{item.title}</Title>
+              <Paragraph>{item.description}</Paragraph>
+            </Card.Content>
+            <Card.Actions>
+              <OpenURLButton url={item.link}/>
+            </Card.Actions>
+          </Card>
+          }
+        />
+      </View>
     );
 };
 
 const styles = StyleSheet.create({
   bar: {
     marginTop: 50,
-  },
-  bigBlue: {
-    color: 'green',
-    fontWeight: 'bold',
-    fontSize: 30,
   },
 });
 ``
