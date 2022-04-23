@@ -1,0 +1,94 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@8.7.0
+2 info using node@v16.14.2
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 2ms
+6 timing config:load:builtin Completed in 2ms
+7 timing config:load:cli Completed in 1ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:/Users/ajfunari/Github/React/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 4ms
+11 timing config:load:file:/Users/ajfunari/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:/usr/local/etc/npmrc Completed in 3ms
+14 timing config:load:global Completed in 3ms
+15 timing config:load:validate Completed in 1ms
+16 timing config:load:credentials Completed in 1ms
+17 timing config:load:setEnvs Completed in 1ms
+18 timing config:load Completed in 14ms
+19 timing npm:load:configload Completed in 14ms
+20 timing npm:load:mkdirpcache Completed in 1ms
+21 timing npm:load:mkdirplogs Completed in 0ms
+22 verbose title npm install @react-navigation/native @react-navigation/native-stack
+23 verbose argv "install" "@react-navigation/native" "@react-navigation/native-stack"
+24 timing npm:load:setTitle Completed in 15ms
+25 timing config:load:flatten Completed in 2ms
+26 timing npm:load:display Completed in 5ms
+27 verbose logfile logs-max:10 dir:/Users/ajfunari/Github/React/C:\Users\Firstname~1\AppData\Roaming\npm-cache/_logs
+28 verbose logfile /Users/ajfunari/Github/React/C:\Users\Firstname~1\AppData\Roaming\npm-cache/_logs/2022-04-21T00_00_16_288Z-debug-0.log
+29 timing npm:load:logFile Completed in 4ms
+30 timing npm:load:timers Completed in 0ms
+31 timing npm:load:configScope Completed in 1ms
+32 timing npm:load Completed in 42ms
+33 timing arborist:ctor Completed in 1ms
+34 silly logfile done cleaning log files
+35 timing idealTree:init Completed in 20ms
+36 timing idealTree:userRequests Completed in 1ms
+37 silly idealTree buildDeps
+38 silly fetch manifest @react-navigation/native@*
+39 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+40 http fetch GET 200 https://registry.npmjs.org/@react-navigation%2fnative 430ms (cache miss)
+41 silly fetch manifest react@^18.0.0
+42 http fetch GET 200 https://registry.npmjs.org/react 113ms (cache miss)
+43 silly fetch manifest react-native@*
+44 http fetch GET 200 https://registry.npmjs.org/react-native 502ms (cache miss)
+45 silly fetch manifest react@17.0.2
+46 timing idealTree Completed in 1105ms
+47 timing command:install Completed in 1116ms
+48 verbose stack Error: unable to resolve dependency tree
+48 verbose stack     at Arborist.[failPeerConflict] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1418:25)
+48 verbose stack     at Arborist.[loadPeerSet] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1411:30)
+48 verbose stack     at async Arborist.[loadPeerSet] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1352:11)
+48 verbose stack     at async Arborist.[buildDepStep] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:970:11)
+48 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:216:7)
+48 verbose stack     at async Promise.all (index 1)
+48 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:153:5)
+48 verbose stack     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:150:5)
+48 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli.js:78:5)
+49 verbose cwd /Users/ajfunari/Github/React
+50 verbose Darwin 21.4.0
+51 verbose node v16.14.2
+52 verbose npm  v8.7.0
+53 error code ERESOLVE
+54 error ERESOLVE unable to resolve dependency tree
+55 error
+56 error While resolving: [1mundefined[22m@[1mundefined[22m
+56 error Found: [1mreact[22m@[1m18.0.0[22m[2m[22m
+56 error [2mnode_modules/react[22m
+56 error   [1mreact[22m@"[1m^18.0.0[22m" from the root project
+56 error   [35mpeer[39m [1mreact[22m@"[1m*[22m" from [1m@react-navigation/native[22m@[1m6.0.10[22m[2m[22m
+56 error   [2mnode_modules/@react-navigation/native[22m
+56 error     [1m@react-navigation/native[22m@"[1m*[22m" from the root project
+56 error
+56 error Could not resolve dependency:
+56 error [35mpeer[39m [1mreact[22m@"[1m17.0.2[22m" from [1mreact-native[22m@[1m0.68.1[22m[2m[22m
+56 error [2mnode_modules/react-native[22m
+56 error   [35mpeer[39m [1mreact-native[22m@"[1m*[22m" from [1m@react-navigation/native[22m@[1m6.0.10[22m[2m[22m
+56 error   [2mnode_modules/@react-navigation/native[22m
+56 error     [1m@react-navigation/native[22m@"[1m*[22m" from the root project
+56 error
+56 error Fix the upstream dependency conflict, or retry
+56 error this command with --force, or --legacy-peer-deps
+56 error to accept an incorrect (and potentially broken) dependency resolution.
+56 error
+56 error See /Users/ajfunari/Github/React/C:\Users\Firstname~1\AppData\Roaming\npm-cache/eresolve-report.txt for a full report.
+57 verbose exit 1
+58 timing npm Completed in 1282ms
+59 verbose unfinished npm timer reify 1650499216450
+60 verbose unfinished npm timer reify:loadTrees 1650499216457
+61 verbose unfinished npm timer idealTree:buildDeps 1650499216481
+62 verbose unfinished npm timer idealTree:#root 1650499216481
+63 verbose code 1
+64 error A complete log of this run can be found in:
+64 error     /Users/ajfunari/Github/React/C:\Users\Firstname~1\AppData\Roaming\npm-cache/_logs/2022-04-21T00_00_16_288Z-debug-0.log

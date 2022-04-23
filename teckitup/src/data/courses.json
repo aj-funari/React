@@ -5,28 +5,30 @@
     "category": "react",
     "description": "My LinkedIn page is where you can read about my education, projects, research, and interests. Feel free to introduce yourself and connect with me!",
     "link": "https://www.linkedin.com/in/alec-funari-12b673199/",
-    "release_date": "12/21/2016",
-    "views": "21,160",
     "image": "/Users/ajfunari/Downloads/react_native_pictures/LinkedIn.png"
   },
   {
     "id": 2,
+    "title": "Robot Operating System",
+    "category": "react",
+    "description": "Vehicle Autonomy and Intelligence Lab",
+    "link": "https://vail.sice.indiana.edu/pages/people.html",
+    "image": "/Users/ajfunari/Downloads/react_native_pictures/Ubuntu.jpeg"
+  },
+  {
+    "id": 3,
     "title": "GitHub: Indiana University",
     "category": "react",
     "description": "My Indiana University GitHub is where all my school related repositories are located. This account contains work from three previous classes.",
     "link": "https://github.iu.edu/ajfunari?tab=repositories",
-    "release_date": "12/21/2016",
-    "views": "21,160",
     "image": "/Users/ajfunari/Downloads/react_native_pictures/GitHub.jpeg"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "GitHub: Personal Account",
     "category": "react",
     "description": "My personal GitHub accont contains repositories related to research and personal projects. Feel free to browse around and learn about my projects!",
     "link": "https://github.com/aj-funari?tab=repositories",
-    "release_date": "12/21/2016",
-    "views": "21,160",
     "image": "/Users/ajfunari/Downloads/react_native_pictures/GitHub.jpeg"
   }
 ]

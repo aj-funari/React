@@ -25,5 +25,13 @@ PaperProvider
 1) Modify index.js to use PaperProvider
 2) paper library --> find @ Callstack.github.IO/react-native-paper
 
-React Native
-1) Navigating through 
+React Natigation
+1) https://reactnative.dev/docs/navigation
+2) cd ios && rm -rf -Pods
+3) pod install
+4) cd ..
+5) npx react-native run-ios
+
+Adding Styles to Buttons
+1) https://blog.logrocket.com/create-style-custom-buttons-react-native/
+
