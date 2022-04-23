@@ -25,7 +25,7 @@ const OpenURLButton = ({ url }) => {
   return <Button title="Tap to follow link" onPress={handlePress} />;
 };
 
-// BUTTON WITH STYLE
+// BUTTON STYLING
 const AppButton = ({ title, size, backgroundColor, name }) => {
   const navigation = useNavigation();
     return (
@@ -65,23 +65,23 @@ const HomeScreen = ({ navigation }) => {
         data={pictures}
         renderItem={({item}) =>
         <Card>
-          <Card>
-            <Text style={styles.title}>teckitup</Text>
-          </Card>
-          <Card.Cover style={styles.marg10} source={{url: item.image}} />
+          <Text style={styles.home}>teckitup</Text>
+          <Card.Cover style={styles.marg20} source={{url: item.image}} />
+          <AppButton title="About AJ Funari" size="sm" backgroundColor="#61dafb" name="Profile" />
+          <AppButton title="Mission Statement" size="sm" backgroundColor="#61dafb" name="Mission" />
+          <AppButton title="Products" size="sm" backgroundColor="#61dafb" name="Products" />
         </Card>
         }
       />
-      <AppButton title="Mission Statement" size="sm" backgroundColor="#61dafb" name="Mission" />
-      <AppButton title="About AJ Funari" size="sm" backgroundColor="#61dafb" name="Profile" />
-      <AppButton title="Products" size="sm" backgroundColor="#61dafb" name="Products" />
     </View>
   );
 };
 
 const MissionStatement = ({ navigation, route }) => {
   return (
-    <Text>{route.params.name} Page</Text>
+    <View>
+      <Text style={styles.mission}>Imagination to reality, building the future!</Text>
+    </View>
   );
 };
 
@@ -148,11 +148,11 @@ const App = () => {
 
 
 const styles = StyleSheet.create({
-  marg10: {
-    marginTop: 10,
+  marg20: {
+    marginTop: 20,
   },
-  title: {
-    marginTop: 16,
+  home: {
+    marginTop: 20,
     paddingVertical: 8,
     borderWidth: 2,
     borderColor: "#20232a",
@@ -163,8 +163,19 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: "bold"
   },
+  mission: {
+    paddingVertical: 8,
+    borderWidth: 2,
+    borderColor: "#20232a",
+    borderRadius: 6,
+    backgroundColor: "#61dafb",
+    color: "black",
+    textAlign: "center",
+    fontSize: 30,
+    fontWeight: "bold"
+  },
   appButtonContainer: {
-    marginTop: 5,
+    marginTop: 20,
     elevation: 8,
     backgroundColor: "black",
     borderRadius: 10,
