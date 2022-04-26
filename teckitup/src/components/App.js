@@ -2,11 +2,10 @@ import React, { useCallback } from 'react';
 import { View, Text, FlatList, StyleSheet, Linking, Button, TouchableOpacity } from 'react-native';
 import { Card, Title, Paragraph, Appbar } from 'react-native-paper'
 import { NavigationContainer } from '@react-navigation/native';
-import courses from '../data/courses.json';
-import pictures from '../data/pictures.json'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
 import { useNavigation } from '@react-navigation/native';
+import ajfunari from "../data/ajfunari.json"
+import pictures from '../data/pictures.json'
 
 // IMPORTING STYLES FROM FILE
 // If importing stylew from AppStyles file, uncomment the line below
@@ -31,7 +30,7 @@ const AppButton = ({ title, size, backgroundColor, name }) => {
     return (
        <TouchableOpacity
           onPress={() =>
-            navigation.navigate(name, {name: 'Mission Statement' })  // choose page to navigate to here
+            navigation.navigate(name, {name: name })  // choose page to navigate to here
           }
           style={[
             styles.appButtonContainer,
@@ -53,7 +52,7 @@ const AppButton = ({ title, size, backgroundColor, name }) => {
         </Text>
       </TouchableOpacity>
     )
-};
+}
 
 // NAVIGATING BETWEEN SCREENS 
 const Stack = createNativeStackNavigator();
@@ -65,11 +64,12 @@ const HomeScreen = ({ navigation }) => {
         data={pictures}
         renderItem={({item}) =>
         <Card>
-          <Text style={styles.home}>teckitup</Text>
+          <Text style={styles.title}>teckitup</Text>
           <Card.Cover style={styles.marg20} source={{url: item.image}} />
           <AppButton title="About AJ Funari" size="sm" backgroundColor="#61dafb" name="Profile" />
-          <AppButton title="Mission Statement" size="sm" backgroundColor="#61dafb" name="Mission" />
+          <AppButton title="Mission Statement" size="sm" backgroundColor="#61dafb" name="Mission Statement" />
           <AppButton title="Products" size="sm" backgroundColor="#61dafb" name="Products" />
+          <AppButton title="Social Media" size="sm" backgroundColor="#61dafb" name="Social Media" />
         </Card>
         }
       />
@@ -77,28 +77,17 @@ const HomeScreen = ({ navigation }) => {
   );
 };
 
-const MissionStatement = ({ navigation, route }) => {
-  return (
-    <View>
-      <Text style={styles.mission}>Imagination to reality, building the future!</Text>
-    </View>
-  );
-};
-
 const ProfileScreen = ({ navigation, route }) => {
   return (
-    // <Text>This is {route.params.name}'s profile</Text>,
     <View>
-      <Appbar>
-        <Appbar.Content title="Chief Executive Officer"/>
-      </Appbar>
+      <Text style={styles.title}>Chief Executive Officer</Text>
       <FlatList 
-        data={courses}
+        data={ajfunari}
         renderItem={({item}) =>
         <Card>
-          <Card.Cover source={{url: item.image}} />
+          <Card.Cover style={styles.marg20} source={{url: item.image}} />
           <Card.Content>
-            <Title>{item.title}</Title>
+            <Title style={styles.marg20}>{item.title}</Title>
             <Paragraph>{item.description}</Paragraph>
           </Card.Content>
           <Card.Actions>
@@ -111,9 +100,25 @@ const ProfileScreen = ({ navigation, route }) => {
   );
 };
 
+const MissionStatement = ({ navigation, route }) => {
+  return (
+    <View>
+      <Text style={styles.title}>Mission Statement</Text>
+    </View>
+  );
+};
+
 const Products = ({ navigation, route }) => {
   return (
-    <Text>{route.params.name} Page</Text>
+    <Text style={styles.title}>Products Page</Text>
+  );
+};
+
+const SocialMedia = ({ navigation, route }) => {
+  return (
+    <View>
+      <Text style={styles.title}>Social Media Page</Text>
+    </View>
   );
 };
 
@@ -124,46 +129,34 @@ const App = () => {
           <Stack.Screen
             name="Home"
             component={HomeScreen}
-            options={{ title: 'Home' }}
           />
           <Stack.Screen 
-            name="Mission"
+            name="Mission Statement"
             component={MissionStatement}
-            options={{ title: 'Mission Statement' }} 
           />
           <Stack.Screen 
             name="Profile"
             component={ProfileScreen}
-            options={{ title: 'AJ Funari' }} 
           />
           <Stack.Screen 
             name="Products"
             component={Products}
-            options={{ title: 'Products' }} 
+          />
+          <Stack.Screen 
+            name="Social Media"
+            component={SocialMedia}
           />
         </Stack.Navigator>
       </NavigationContainer>
     );
 };
 
-
 const styles = StyleSheet.create({
   marg20: {
     marginTop: 20,
   },
-  home: {
+  title: {
     marginTop: 20,
-    paddingVertical: 8,
-    borderWidth: 2,
-    borderColor: "#20232a",
-    borderRadius: 6,
-    backgroundColor: "#61dafb",
-    color: "black",
-    textAlign: "center",
-    fontSize: 40,
-    fontWeight: "bold"
-  },
-  mission: {
     paddingVertical: 8,
     borderWidth: 2,
     borderColor: "#20232a",
