@@ -1,0 +1,6 @@
+module Pods_teckitup {
+  umbrella header "Pods-teckitup-umbrella.h"
+
+  export *
+  module * { export * }
+}
